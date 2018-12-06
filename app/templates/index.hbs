@@ -5,16 +5,14 @@
       data-test="asyncBtn"
       @defaultText="Go to My List"
       @pendingText="Going..."
-      onclick={{action "fav"}}
-    >
+      onclick={{action "fav"}}>
     </AsyncButton>
   </div>
   <div class="row justify-content-center">
     {{#each model as |post|}}
       <div class="card float-left col-md-3 m-3" data-test="post">
         <SinglePost
-          @post = {{post}}
-        />
+          @post = {{post}}/>
       </div>
     {{/each}}
   </div>

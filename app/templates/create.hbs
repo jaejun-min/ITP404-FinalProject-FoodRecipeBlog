@@ -12,17 +12,13 @@
     <div class="form-group">
       <label for="calorie"><b>Calorie</b></label>
       {{input type="text" class="form-control" id="calorie" value=calorie}}
-      <NumberValidate
-        @calorie={{calorie}}
-      >
+      <NumberValidate @calorie={{calorie}}>
       </NumberValidate>
     </div>
     <div class="form-group">
       <label for="time"><b>Cooking Time</b></label>
       {{input class="form-control" type="text" id="time" value=time}}
-      <NumberValidate
-        @calorie={{time}}
-      >
+      <NumberValidate @calorie={{time}}>
       </NumberValidate>
     </div>
     <div class="form-group">

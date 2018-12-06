@@ -1,12 +1,9 @@
 
-<div
-  class="view overlay"
->
+<div class="view overlay">
   <img
     class="card-img-top w-100 h-100"
     src={{post.img}}
-    alt={{post.title}}
-  >
+    alt={{post.title}}>
   <a href="#!">
     <div class="mask rgba-white-slight"></div>
   </a>
@@ -22,19 +19,16 @@
     <StarButton
       data-test="testStar"
       @on={{post.starred}}
-      @onClick={{action "star" post}}
-    />
+      @onClick={{action "star" post}}/>
   </div>
   <div class="row justify-content-center">
     <button
       type="button"
       class="btn btn-md btn-primary col-5 m-2"
       onclick={{action "deletePost" post}}
-      data-test="delete-post"
-    >
+      data-test="delete-post">
       Delete
     </button>
-
     {{#link-to
       "edit"
       post.id
