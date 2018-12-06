@@ -4,7 +4,7 @@ export default Controller.extend({
     createRecipe(event){
       event.preventDefault();
       let post = this.store.createRecord('post',{
-        title: this.title,
+        name: this.name,
         img: this.img,
         calorie: this.calorie,
         time: this.time,

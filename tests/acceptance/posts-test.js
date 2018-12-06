@@ -12,7 +12,7 @@ module('Acceptance | posts', function(hooks) {
   test('update recipe', async function(assert){
 
     await visit('/posts/new');
-    await fillIn('#title', 'pasta');
+    await fillIn('#name', 'pasta');
     await fillIn('#calorie', 200);
     await fillIn('#time', 200);
     await click('[data-test="create"]');
@@ -21,7 +21,7 @@ module('Acceptance | posts', function(hooks) {
 
   test('read a single food', async function(assert){
     server.create('post', {
-      title: 'chicken',
+      name: 'chicken',
       ingredient: 'put salt',
       calorie: 10,
       time: 4

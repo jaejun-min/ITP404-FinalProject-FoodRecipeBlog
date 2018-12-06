@@ -3,7 +3,7 @@ export default Route.extend({
   titleToken:'Create My Recipe',
   setupController(controller, model) {
   this._super(controller, model);
-  controller.set('title','');
+  controller.set('name','');
   controller.set('img', 'https://www.edamam.com/web-img/0c1/0c1293b4d206a4e282780576ddd14873')
   controller.set('calorie', '');
   controller.set('time', '');
