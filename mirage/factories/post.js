@@ -5,8 +5,6 @@ export default Factory.extend({
   id(i){
     return `${i+1}`;
   },
-  // title: faker.list.cycle('Pasta', 'Ramen', 'Hamburger', 'Sushi', 'Pizza', 'Chicken Pasta'),
-  // body: faker.list.cycle(['Pasta', 'h1'], ['c., 1'])
   title(i) {
     return faker.list.cycle('Chicken Vesuvio', 'Creamy pasta', 'Lobster Roll', 'Chicken Ramen', 'Shaved Asparagus Pizza recipes', 'Steak & Chips Salad', 'Mixed Greens Salad', 'Orange & Avocado Salad', 'The Ultimate Burger', 'The Pastrami Burger Bomb Recipe')(i);
   },
