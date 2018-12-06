@@ -1,0 +1,14 @@
+<div class="container" >
+  <div class="row justify-content-center">
+    {{#each model as |post|}}
+      {{#if post.starred}}
+        <div class="card float-left col-md-3 m-3" data-test="mylist">
+          <SinglePost
+            @post={{post}}
+          />
+        </div>
+      {{/if}}
+    {{/each}}
+  </div>
+</div>
+{{outlet}}

@@ -1,0 +1,26 @@
+<div class="container" >
+  <h2> Create your own recipe</h2><br>
+  <form onsubmit={{action "editPost" model}}>
+    <div>
+      <label for="title"><b>Food Name:</b></label>
+      {{input type="text" id="title" value=model.title}}
+    </div>
+    <div>
+      <label for="img"><b>Img URL:</b></label>
+      {{input type="text" id="img" value=model.img}}
+    </div>
+    <div>
+      <label for="calorie" ><b>Calorie</b></label>
+      {{input type="text" id="calorie" value=model.calorie}}
+    </div>
+    <div>
+      <label for="time"><b>Cooking Time</b></label>
+      {{input type="text" id="time" value=model.time}}
+    </div>
+    <div>
+      <h4>Recipe:</h4>
+      {{textarea rows="8" cols="80" value=model.ingredient}}
+    </div>
+    <button class="btn btn-md btn-primary m-3" data-test="edit-post" type="submit">Edit</button>
+  </form>
+</div>

@@ -1,0 +1,16 @@
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+>
+<button
+  class="btn"
+  data-test="testStarred"
+  value={{on}}
+  onclick={{action "toggle"}}
+>
+  {{#if @on}}
+    <i class="material-icons">star</i>
+  {{else}}
+    <i class="material-icons">star_border</i>
+  {{/if}}
+</button>

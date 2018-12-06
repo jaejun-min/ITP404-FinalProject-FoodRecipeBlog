@@ -1,5 +1,43 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
 
+<div class="header">
+  {{#bs-navbar
+    type=type
+    backgroundColor=bg
+    collapsed=collapsed
+    onCollapse=(action (mut collapsed) true)
+    onExpand=(action (mut collapsed) false)
+  as |navbar|
+  }}
+    <div class="navbar-header">
+      {{navbar.toggle}}
+    </div>
+    {{#navbar.content}}
+      {{#navbar.nav as |nav|}}
+        {{#nav.item}}{{#nav.link-to "index"}}<h3>Home</h3>{{/nav.link-to}}{{/nav.item}}
+        {{#nav.item}}{{#nav.link-to "my-list"}}<h4>My List</h4>{{/nav.link-to}}{{/nav.item}}
+        {{#nav.item}}{{#nav.link-to "create"}}<h4>Create Recipe</h4>{{/nav.link-to}}{{/nav.item}}
+      {{/navbar.nav}}
+    {{/navbar.content}}
+  {{/bs-navbar}}
+</div>
+<div class="jumbotron p-0">
+  <div class="view overlay rounded-top">
+    <img
+      src="https://www.ocf.berkeley.edu/~sather/wp-content/uploads/2018/01/food-.jpg"
+      height="400"
+      class="w-100"
+      alt="Sample image"
+    >
+    <a href="#">
+      <div
+        class="mask rgba-white-slight"
+      >
+      </div>
+    </a>
+  </div>
+  <div class="card-body text-center mb-3">
+    <h3 class="card-title h3 my-4"><strong>My Food Blog!!!</strong></h3>
+    <p class="card-text py-2">Share your food recipe with others..!</p>
+  </div>
+</div>
 {{outlet}}

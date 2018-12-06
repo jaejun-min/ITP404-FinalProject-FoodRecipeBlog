@@ -1,0 +1,58 @@
+
+<div
+  class="view overlay"
+>
+  <img
+    class="card-img-top w-100 h-100"
+    src={{post.img}}
+    alt={{post.title}}
+  >
+  <a href="#!">
+    <div class="mask rgba-white-slight"></div>
+  </a>
+</div>
+<div class="card-body">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">  <h5 class="card-title">{{post.title}}</h5></li>
+    <li class="list-group-item"><p>{{truncate-text post.ingredient 50}}</p></li>
+  </ul>
+</div>
+<div class="container">
+  <div class="row justify-content-left">
+    <StarButton
+      data-test="testStar"
+      @on={{post.starred}}
+      @onClick={{action "star" post}}
+    />
+  </div>
+  <div class="row justify-content-center">
+    <button
+      type="button"
+      class="btn btn-md btn-primary col-5 m-2"
+      onclick={{action "deletePost" post}}
+      data-test="delete-post"
+    >
+      Delete
+    </button>
+
+    {{#link-to
+      "edit"
+      post.id
+      class="btn btn-md btn-primary col-5  m-2"
+      data-test="edit-btn"
+      tagName="button"
+    }}
+      Edit
+    {{/link-to}}
+  </div>
+  <div class="row justify-content-center">
+    {{#link-to
+      "detail"
+      post.id
+      class="btn btn-md col btn-primary m-2"
+      tagName="button"
+    }}
+      View details
+    {{/link-to}}
+  </div>
+</div>

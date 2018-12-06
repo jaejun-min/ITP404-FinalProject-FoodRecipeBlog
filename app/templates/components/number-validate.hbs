@@ -1,0 +1,15 @@
+<div
+  class="inline"
+  data-test="valid"
+  value={{isValid}}
+>
+  {{#if calorieValid}}
+    <div class="alert alert-success">
+      <p>Ok!</p>
+    </div>
+  {{else}}
+    <div class="alert alert-danger">
+      <p>Invalid input, please enter number</p>
+    </div>
+  {{/if}}
+</div>
