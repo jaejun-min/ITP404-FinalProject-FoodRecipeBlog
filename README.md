@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/jaejun-min/ITP404-FinalProject.svg?branch=master)](https://travis-ci.org/jaejun-min/ITP404-FinalProject)
 # final
 
 This README outlines the details of collaborating on this Ember application.
